@@ -27,14 +27,14 @@
 </div>
 <div style="clear:both;"></div>
         <div style="text-align: center;">
-<button id="backgound-control">خلفية رمادي</button>
+<button id="background-control">خلفية رمادي</button>
 <button id="thin-control">رفيع</button>
 <button id="wide-control">عريض</button>
 <button id="tall-control">طويل</button>
 <button id="short-control">قصير</button>
 <button id="margin-top-control">فوقه مسافة</button>
 <button id="margin-bottom-control">تحته مسافة</button>
-<button id="border-control">ليه إطار</button>
+<button id="border-control">ليه إطار</button>.
 <button id="opacity-control">شفاف</button>
 <button id="corner-control">زواياه مدورة</button>
 <button id="right-control">هاته يمين</button>
@@ -43,46 +43,86 @@
         </div>
 
         <script>
-            $('#backgound-control').click(function(){
+		var numberOfClick=0;
+            $('#background-control').click(function(){
                 $('#div1').css('background-color', '#eeeeee')
+				numberOfClick=numberOfClick+1
+				if(numberOfClick%2==0)
+				$('#div1').css('background-color','#001199')
             });
             $('#thin-control').click(function(){
                 $('#div1').css('width', '50px')
+				numberOfClick=numberOfClick+1
+				if(numberOfClick%2==0)
+				$('#div1').css('width','200px')
             });
             $('#wide-control').click(function(){
                 $('#div1').css('width', '500px')
+				numberOfClick=numberOfClick+1
+				if(numberOfClick%2==0)
+				$('#div1').css('width','200px')
             });
             $('#tall-control').click(function(){
                 $('#div1').css('height', '500px')
+				numberOfClick=numberOfClick+1
+				if(numberOfClick%2==0)
+				$('#div1').css('height','200px')
             });
             $('#short-control').click(function(){
                 $('#div1').css('height', '50px')
+				numberOfClick=numberOfClick+1
+				if(numberOfClick%2==0)
+				$('#div1').css('height','200px')
             });
             $('#margin-top-control').click(function(){
                 $('#div1').css('margin-top', '200px')
+				numberOfClick=numberOfClick+1
+				if(numberOfClick%2==0)
+				$('#div1').css('margin-top','0px')
             });
             $('#margin-bottom-control').click(function(){
                 $('#div1').css('margin-bottom', '200px')
+				numberOfClick=numberOfClick+1
+				if(numberOfClick%2==0)
+				$('#div1').css('margin-bottom','0px')
             });
             $('#border-control').click(function(){
                 $('#div1').css('border', '1px solid cyan')
+				numberOfClick=numberOfClick+1
+				if(numberOfClick%2==0)
+				$('#div1').css('border','0px')
             });
             $('#opacity-control').click(function(){
                 $('#div1').css('opacity', '0.2')
+				numberOfClick=numberOfClick+1
+				if(numberOfClick%2==0)
+				$('#div1').css('opacity','1')
             });
             $('#corner-control').click(function(){
                 $('#div1').css('border-radius', '20px');
+				numberOfClick=numberOfClick+1
+				if(numberOfClick%2==0)
+				$('#div1').css('border-radius','0px')
             });
             $('#right-control').click(function(){
                 $('#div1').css('float', 'right')
+				numberOfClick=numberOfClick+1
+				if(numberOfClick%2==0)
+				$('#div1').css('float','none')
             });
             $('#left-control').click(function(){
                 $('#div1').css('float', 'left')
+				numberOfClick=numberOfClick+1
+				if(numberOfClick%2==0)
+				$('#div1').css('float','none')
             });
             $('#position-control').click(function(){
                 $('#div1').css('position', 'absolute');
                 $('#div1').css('top', Math.random() * (600 - 0) + 0);
                 $('#div1').css('left', Math.random() * (1000 - 0) + 0);
+				numberOfClick=numberOfClick+1
+				if(numberOfClick%2==0)
+				$('#div1').css('position','static')
             })
 
         </script>
