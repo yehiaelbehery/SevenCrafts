@@ -24,6 +24,12 @@
         height:95.56px;
         display: inline-block;
     }
+    .pokemonImg{
+        border:1px solid #000000;
+        width:100px;
+        height:100px;
+        display: inline-block;
+    }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <div style="direction: rtl;">
@@ -39,6 +45,8 @@
        <br />
        <button id="scaryImgAddButton">زود  صورة مخيفة</button>
        <button style="display: none;" id="scaryImgRemoveButton">إمسح  صورة مخيفة</button>
+       <button id="pokemonImgAddButton">زود صورة pokemon</button>
+       <button style="display: none;" id="pokemonImgRemoveButton">امسح صورة pokemon</button>
 
    </div>
     </div>
@@ -93,5 +101,23 @@
                     $('#scaryImgRemoveButton').css('display', 'none');
                 }
             });
+            $('#pokemonImgAddButton').click(function () {
+                $('.firstRow').append('img src="pokemon.jpeg" class="pokemonImg />');
+                if($('.pokemonImg').length > 0){
+                    $('#pokemonImgRemoveButton').css('display', 'inline-block');
+                }else{
+                    $('#pokemonImgRemoveButton').css('display', 'none');
+                }
+             });
+            $('#pokemonImgRemoveButton').click(function () {
+                $('.pokemonImg').last().remove();
+                if($('.pokemonImg').length > 0){
+                    $('#pokemonImgRemoveButton').css('display', 'inline-block');
+                }else{
+                    $('#pokemonImgRemoveButton').css('display', 'none');
+                }
+            });
+                    
+                
 
         </script>
