@@ -1,0 +1,89 @@
+<meta charset="UTF-8">
+<style>
+
+    #div1 {
+        width:200px;
+        height:200px;
+        display: inline-block;
+        background-color: #001199;
+        color:white;
+        z-index: 0; /* or some other value */
+    transform: translateY(0);
+    }
+    #image1 {
+         width:200px;
+         height:200px;
+         display: inline-block;
+        vertical-align: top;
+     }
+    #button1 {
+          display: inline-block;
+      }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<div style="direction: rtl;">
+<div id="firstRow"  style="text-align: center;direction: rtl;"><h1>غير style أي tag</h1>
+    <div id="div1">Div</div>
+</div>
+<div style="clear:both;"></div>
+        <div style="text-align: center;">
+<button id="backgound-control">خلفية رمادي</button>
+<button id="thin-control">رفيع</button>
+<button id="wide-control">عريض</button>
+<button id="tall-control">طويل</button>
+<button id="short-control">قصير</button>
+<button id="margin-top-control">فوقه مسافة</button>
+<button id="margin-bottom-control">تحته مسافة</button>
+<button id="border-control">ليه إطار</button>
+<button id="opacity-control">شفاف</button>
+<button id="corner-control">زواياه مدورة</button>
+<button id="right-control">هاته يمين</button>
+            <button id="left-control">هاته شمال</button>
+            <button id="position-control">حركه في مكان عشوائي</button>
+        </div>
+
+        <script>
+            $('#backgound-control').click(function(){
+                $('#div1').css('background-color', '#eeeeee')
+            });
+            $('#thin-control').click(function(){
+                $('#div1').css('width', '50px')
+            });
+            $('#wide-control').click(function(){
+                $('#div1').css('width', '500px')
+            });
+            $('#tall-control').click(function(){
+                $('#div1').css('height', '500px')
+            });
+            $('#short-control').click(function(){
+                $('#div1').css('height', '50px')
+            });
+            $('#margin-top-control').click(function(){
+                $('#div1').css('margin-top', '200px')
+            });
+            $('#margin-bottom-control').click(function(){
+                $('#div1').css('margin-bottom', '200px')
+            });
+            $('#border-control').click(function(){
+                $('#div1').css('border', '1px solid cyan')
+            });
+            $('#opacity-control').click(function(){
+                $('#div1').css('opacity', '0.2')
+            });
+            $('#corner-control').click(function(){
+                $('#div1').css('border-radius', '20px');
+            });
+            $('#right-control').click(function(){
+                $('#div1').css('float', 'right')
+            });
+            $('#left-control').click(function(){
+                $('#div1').css('float', 'left')
+            });
+            $('#position-control').click(function(){
+                $('#div1').css('position', 'absolute');
+                $('#div1').css('top', Math.random() * (600 - 0) + 0);
+                $('#div1').css('left', Math.random() * (1000 - 0) + 0);
+            })
+
+        </script>
+</div>

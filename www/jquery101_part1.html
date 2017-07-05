@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+<style>
+
+    #div1 {
+        width:200px;
+        height:200px;
+        display: inline-block;
+        background-color: #001199;
+        color:white;
+    }
+    #image1 {
+         width:200px;
+         height:200px;
+         display: inline-block;
+        vertical-align: top;
+     }
+    #button1 {
+          display: inline-block;
+      }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<div id="firstRow"  style="text-align: center;direction: rtl;"><h1>خلي أي tag زرار</h1>
+    <div id="div1">Div</div>
+    <img src="http://cdn.modablaj.com/images/social.png" id="image1">
+    <button id="button1">Button</button>
+</div>
+
+
+        <script>
+            $('#div1').click(function(){
+                alert('أنت دست على div');
+            })
+            $('#image1').click(function(){
+                alert('أنت دست على img');
+            })
+            $('#button1').click(function(){
+                alert('button أنت دست على');
+            })
+
+        </script>

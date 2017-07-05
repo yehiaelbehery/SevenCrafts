@@ -1,0 +1,106 @@
+<meta charset="UTF-8">
+<style>
+
+    #div1 {
+        width:100%;
+        margin: auto;
+        height:300px;
+        display: inline-block;
+        background-color: #001199;
+        color:white;
+        top:-300px;
+    }
+    #button1 {
+          display: inline-block;
+      }
+    .blueDiv{
+        border:1px solid #000000;
+        background-color: #001199;
+        width:100px;
+        height:100px;
+        display: inline-block;
+    }
+    .redDiv{
+        border:1px solid #000000;
+        background-color: #d2322d;
+        width:100px;
+        height:100px;
+        display: inline-block;
+    }
+    .scaryImg{
+        border:1px solid #000000;
+        width:100px;
+        height:100px;
+        display: inline-block;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<div style="direction: rtl;">
+<div id="firstRow"  style="text-align: center;direction: rtl;height:300px"><h1>زود أو إمسح أي tag</h1>
+
+</div>
+   <div style="text-align: right;width: 300px;margin:auto;">
+       <button id="blueDivAddButton">زود  div أزرق</button>
+       <button style="display: none;" id="blueDivRemoveButton">إمسح  div أزرق</button>
+       <br />
+       <button id="redDivAddButton">زود  div أحمر</button>
+       <button style="display: none;" id="redDivRemoveButton">إمسح  div أحمر</button>
+       <br />
+       <button id="scaryImgAddButton">زود  صورة مخيفة</button>
+       <button style="display: none;" id="scaryImgRemoveButton">إمسح  صورة مخيفة</button>
+
+   </div>
+    </div>
+        <script>
+            $('#blueDivAddButton').click(function () {
+                $('#firstRow').append('<div class="blueDiv"></div>');
+                if($('.blueDiv').length > 0){
+                    $('#blueDivRemoveButton').css('display', 'inline-block');
+                }else{
+                    $('#blueDivRemoveButton').css('display', 'none');
+                }
+            });
+            $('#blueDivRemoveButton').click(function () {
+                $('.blueDiv').last().remove();
+                if($('.blueDiv').length > 0){
+                    $('#blueDivRemoveButton').css('display', 'inline-block');
+                }else{
+                    $('#blueDivRemoveButton').css('display', 'none');
+                }
+            });
+
+            $('#redDivAddButton').click(function () {
+                $('#firstRow').append('<div class="redDiv"></div>');
+                if($('.redDiv').length > 0){
+                    $('#redDivRemoveButton').css('display', 'inline-block');
+                }else{
+                    $('#redDivRemoveButton').css('display', 'none');
+                }
+            });
+            $('#redDivRemoveButton').click(function () {
+                $('.redDiv').last().remove();
+                if($('.redDiv').length > 0){
+                    $('#redDivRemoveButton').css('display', 'inline-block');
+                }else{
+                    $('#redDivRemoveButton').css('display', 'none');
+                }
+            });
+
+            $('#scaryImgAddButton').click(function () {
+                $('#firstRow').append('<img src="scary.jpeg" class="scaryImg" />');
+                if($('.scaryImg').length > 0){
+                    $('#scaryImgRemoveButton').css('display', 'inline-block');
+                }else{
+                    $('#scaryImgRemoveButton').css('display', 'none');
+                }
+            });
+            $('#blueDivRemoveButton').click(function () {
+                $('.scaryImg').last().remove();
+                if($('.scaryImg').length > 0){
+                    $('#scaryImgRemoveButton').css('display', 'inline-block');
+                }else{
+                    $('#scaryImgRemoveButton').css('display', 'none');
+                }
+            });
+
+        </script>
