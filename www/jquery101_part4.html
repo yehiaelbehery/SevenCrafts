@@ -45,18 +45,19 @@
 <div id="firstRow"  style="text-align: center;direction: rtl;height:300px"><h1>زود أو إمسح أي tag</h1>
 
 </div>
-   <div style="text-align: right;width: 300px;margin:auto;">
+   <div style="text-align: right;width: 300px; margin:auto;">
        <button id="blueDivAddButton">زود  div أزرق</button>
        <button style="display: none;" id="blueDivRemoveButton">إمسح  div أزرق</button>
        <br />
        <button id="redDivAddButton">زود  div أحمر</button>
        <button style="display: none;" id="redDivRemoveButton">إمسح  div أحمر</button>
        <br />
-       <button id="scaryImgAddButton">زود  صورة مخيفة</button>
-       <button style="display: none;" id="scaryImgRemoveButton">إمسح  صورة مخيفة</button>
+       <button id="scaryImgAddButton">زود  الصورة مخيفة</button>
+       <button style="display: none;" id="scaryImgRemoveButton">إمسح  الصورة مخيفة</button>
+	   <br />
        <button id="pokemonImgAddButton">زود صورة pokemon</button>
        <button style="display: none;" id="pokemonImgRemoveButton">امسح صورة pokemon</button>
-
+       <br />
    </div>
     </div>
         <script>
@@ -111,22 +112,20 @@
                 }
             });
             $('#pokemonImgAddButton').click(function () {
-                $('.firstRow').append('img src="pokemon.jpeg" class="pokemonImg />');
-                if($('.pokemonImg').length > 0){
-                    $('#pokemonImgRemoveButton').css('display', 'inline-block');
-                }else{
-                    $('#pokemonImgRemoveButton').css('display', 'none');
-                }
-             });
-            $('#pokemonImgRemoveButton').click(function () {
-                $('.pokemonImg').last().remove();
+                $('#firstRow').append('<img src="pokemon.jfif" class="pokemonImg" />');
                 if($('.pokemonImg').length > 0){
                     $('#pokemonImgRemoveButton').css('display', 'inline-block');
                 }else{
                     $('#pokemonImgRemoveButton').css('display', 'none');
                 }
             });
-                    
-                
-
+            $('#pokemonImgRemoveButton').click(function () {
+                $('.pokemonImg').last().remove();
+                if($('.pokemonImg').length > 0){
+                    $('pokemonImgRemoveButton').css('display', 'inline-block');
+                }else{
+                    $('#pokemonImgRemoveButton').css('display', 'none');
+                }
+            });
+           
         </script>

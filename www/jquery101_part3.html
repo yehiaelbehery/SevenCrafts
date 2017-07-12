@@ -2,13 +2,13 @@
 <style>
 
     #div1 {
-        width:100%;
-        margin: auto;
-        height:300px;
+        width:200px;
+        margin:0;
+        height:660px;
         display: inline-block;
-        background-color: #001199;
+        background-color: #cb42f4;
         color:white;
-        top:-300px;
+        left:-300px;
     }
     #button1 {
           display: inline-block;
@@ -16,20 +16,20 @@
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <div style="direction: rtl;">
-<div id="firstRow"  style="text-align: center;direction: rtl;height:300px"><h1>Animations</h1>
+<div id="firstRow"  style="text-align center;direction: rtl;height:300px"><h1 style="color:#42dcf4; position:absolute; left:600px;">Animations</h1>
     <div id="div1">Div</div>
 </div>
    <div style="text-align: center"><button id="button1">نزل الستارة</button></div>
     </div>
         <script>
             $('#div1').css('position','absolute');
-            $('#div1').css('left','0px');
+            $('#div1').css('top','0px');
             $('#button1').click(function(){
                 if($('#button1').text() == 'نزل الستارة') {
-                    $('#div1').animate({top: "0px"}, 3 * 1000);
+                    $('#div1').animate({left: "0px"}, 1 * 1000);
                     $('#button1').text('إرفع الستارة');
                 }else{
-                    $('#div1').animate({top: "-300px"}, 3 * 1000);
+                    $('#div1').animate({left: "-300px"}, 1 * 1000);
                     $('#button1').text('نزل الستارة');
                 }
                 });
